@@ -1,3 +1,6 @@
+# BITÁCORA DEL GUILD PELUDOS:
+
+
 ### 08/04/2018 - REUNIÓN PRESENCIAL:
 
 1. Buscar webs o aplicaciones existentes
