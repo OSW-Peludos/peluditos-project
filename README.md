@@ -15,6 +15,6 @@ Si te gusta el proyecto y quieres contribuir puedes hacerlo [aquí](https://gith
 Para estar al día de todo puedes echar un vistazo a nuestra [bitácora](https://github.com/OSWeekends/peluditos-project/blob/master/BITACORA.md).
 
 ## Licencia
-[GNU General Public License v3.0](https://github.com/mrcodedev/iwibot/blob/master/LICENSE)
+[GNU General Public License v3.0](https://github.com/OSWeekends/peluditos-project/blob/master/LICENSE)
 
 ![](https://github.com/OSWeekends/peluditos-project/blob/master/.oswimgs/osw-git-footer.jpg)
