@@ -8,6 +8,10 @@ function pageScraper(pageNumber) {
             const url = `http://www.madrid.org/adanweb/html/web/ListadoCompleto.icm?accion_paginacion=${pageNumber}`;
             const browser = await puppeteer.launch();
             const page = await browser.newPage();
+            
+            // Cookie Hack generator. Don't remove :troll:
+            await page.goto("http://www.madrid.org/adanweb/html/web/ListadoCompleto.icm?accion_paginacion")
+            
             await page.goto(url);
             const result = await page.evaluate(() => {
                 const datos = document.querySelectorAll(".txt07gr2 img");
