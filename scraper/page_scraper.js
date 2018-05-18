@@ -6,7 +6,6 @@ function pageScraper(pageNumber) {
         let scrape = async () => {
             console.log("[INFO][Peluditos Project][Scraper][Page] Just started page:", pageNumber);
             const url = `http://www.madrid.org/adanweb/html/web/ListadoCompleto.icm?accion_paginacion=${pageNumber}`;
-
             const browser = await puppeteer.launch();
             const page = await browser.newPage();
             await page.goto(url);
@@ -20,7 +19,6 @@ function pageScraper(pageNumber) {
                     imgSrc = imgSrc.split("valorId=");
                     imgSrc = imgSrc[1].split(",");
 
-                    // Subir al Array
                     animales.push({
                         centroAdopcion: imgSrc[0],
                         cdReferencia: imgSrc[1]
@@ -41,10 +39,11 @@ function pageScraper(pageNumber) {
                 item.uuid = uuidv4();
                 return item;
             });
+            
             resolve(values)
             console.log("[INFO][Peluditos Project][Scraper][Page] Just finished page:", pageNumber);
         }).catch(err => {
-            console.log("[ERROR][Peluditos Project][Scraper][Page] ERRRRRRRORRRR:", pageNumber);
+            console.log("[ERROR][Peluditos Project][Scraper][Page] Error:", pageNumber);
             reject(err)
         });
     })

@@ -58,7 +58,7 @@ function profileScraper(data) {
 
                     //Ignore animal shelter or other extra fields
                     if (i <= 10) {
-                        animalData[rawText[0]] = rawText[1].trim();
+                        animalData[rawText[0]] = rawText[1];
                     }
                 }
                 return animalData;

@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/OSWeekends/peluditos-project#readme",
   "dependencies": {
-    "puppeteer": "^1.4.0"
+    "mysql": "2.15.0",
+    "puppeteer": "1.4.0",
+    "uuid": "3.2.1"
   }
 }
