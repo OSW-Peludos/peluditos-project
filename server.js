@@ -10,11 +10,27 @@ app.use(express.static('public'));
 
 app.set('view engine', 'pug');
 
-// Routes
+/*
+    --- Sever Routes ---
+*/ 
 app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/peluditos', (req, res) => {
+    console.log("@TODO: Lista de Peluditos");
+    res.render('index');
+});
+
+app.get('/peludito/:id', (req, res) => {
+    console.log("@TODO: Detalles de Peludito:", req.params.id);
+    res.render('index');
+});
+
+
+/*
+    --- API Routes ---
+*/ 
 
 app.listen(port, () => {
   console.log('[info][server] listening on port:', port);
