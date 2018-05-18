@@ -1,12 +1,16 @@
 const Scheduled = require("scheduled"),
     express = require('express'),
+    helmet = require('helmet'),
     scraper = require("./scraper/scraper");
 
 const app = express();
+
 const port = process.env.PORT || 3000;
 
 // Middelware
+app.use(helmet());
 app.use(express.static('public'));
+
 
 app.set('view engine', 'pug');
 
