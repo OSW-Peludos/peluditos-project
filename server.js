@@ -36,6 +36,36 @@ app.get('/peludito/:id', (req, res) => {
     --- API Routes ---
 */ 
 
+app.get('/api/peludito', (req, res) => {
+    let msg = "@TODO: Lista de Peluditos via API";
+    console.log(msg);
+    res.send(msg);
+});
+
+app.post('/api/peludito', (req, res) => {
+    let msg = "@TODO: Añadir un nuevo peludito via API";
+    console.log(msg);
+    res.send(msg);
+});
+
+app.get('/api/peludito/:id', (req, res) => {
+    let msg = "@TODO: Detalles de un peludito via API";
+    console.log(msg);
+    res.send(msg);
+});
+
+app.put('/api/peludito/:id', (req, res) => {
+    let msg = "@TODO: Actualizar los detalles de un peludito via API";
+    console.log(msg);
+    res.send(msg);
+});
+
+app.delete('/api/peludito/:id', (req, res) => {
+    let msg = "@TODO: Eliminar un peludito via API";
+    console.log(msg);
+    res.send(msg);
+});
+
 app.listen(port, () => {
   console.log('[info][server] listening on port:', port);
 });
