@@ -23,7 +23,7 @@ function scraper () {
         await page.goto('http://www.madrid.org/adanweb/html/web/ListadoCompleto.icm');
         const result = await page.evaluate(() => {
             //@Ulises: Refactor next release :troll:
-            return document.querySelector("#areAplicacion > div:nth-child(2) > table > tbody > tr > td > div > a:nth-child(21)").getAttribute("onclick").split("'")[1];
+            return document.querySelector("#areAplicacion > div:nth-child(2) > table > tbody > tr > td > div > a:last-child").getAttribute("onclick").split("'")[1];
         });
     
         await browser.close();
@@ -42,14 +42,14 @@ function scraper () {
             }
             const cleanData = [].concat(...paginationData);
     
-            fs.writeFileSync("data/pagination.json", JSON.stringify(cleanData));
+            fs.writeFileSync(`${__dirname}/data/pagination.json`, JSON.stringify(cleanData));
             console.log("[INFO][Peluditos Project][Scraper] Ended with Pagiantion. File saved in ./data/pagination.json");
             console.log(`[INFO][Peluditos Project][Scraper] We discovered ${cleanData.length} Animals in total. Profile details extraction is about to start...`);
             
             for (var i = 0; i < cleanData.length; i++) {
                 const item = cleanData[i];
                 let animal = await profileScraper(item);
-                fs.writeFileSync(`data/${item.uuid}.json`, JSON.stringify(animal));
+                fs.writeFileSync(`${__dirname}/data/${item.uuid}.json`, JSON.stringify(animal));
                 console.log("[INFO][Peluditos Project][Scraper] Added to file:", item.uuid);
                 await db.addAnimal(animal);
                 console.log("[INFO][Peluditos Project][Scraper] Added to database:", item.uuid);
