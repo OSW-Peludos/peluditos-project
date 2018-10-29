@@ -1,5 +1,27 @@
 # BITÁCORA DEL GUILD PELUDOS:
 
+### 27/10/2018 - REUNUIÓN PRESENCIAL
+
+**Decidimos empezar por la ficha de animales.**
+ + Se podrá crear una ficha de animal perdido o encontrado. 
+ + Los animales subidos de momento se guardarán en dos listas: Perdidos y encontrados.
+ + La búsqueda se podrá seleccionar por animal y zona.
+ + Para que la ficha se publique se utilizará la verificacón por email
+ 
+**Tecnologas a usar:**
+ + Para la base de datos utilizaremos MongoDB
+ + Backend con Node y Express
+ + Front con React
+  
+Definimos los componentes de la ficha y la estructura para el guardado en base de datos.
+
+**Pendiente:**
+ + Crear la estructura para el Back
+ + Crear la estructura para Front
+
+Haremos una reunión el lunes 29/10/2018 para dejar montada la base de datos.
+
+
 
 ### 08/04/2018 - REUNIÓN PRESENCIAL:
 
