@@ -17,7 +17,7 @@
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "method-override": "^3.0.0",
-    "mongoose": "^5.3.7",
+    "mongoose": "^5.7.5",
     "morgan": "~1.9.0",
     "multer": "^1.4.1",
     "serve-favicon": "^2.5.0"
