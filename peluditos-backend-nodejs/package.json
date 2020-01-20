@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "bluebird": "^3.5.2",
@@ -20,11 +22,13 @@
     "mongoose": "^5.7.5",
     "morgan": "~1.9.0",
     "multer": "^1.4.1",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "snyk": "^1.110.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
     "mocha": "^5.2.0"
-  }
+  },
+  "snyk": true
 }
