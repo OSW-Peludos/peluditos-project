@@ -43,7 +43,7 @@ Desarrollaremos el proyecto en varias fases:
 ### Componentes:
   * @baumannzone
   * @bytelovers
-  * @superbeast
+  * @mrcodedev
   * @xexuline
   * @momantai
 
